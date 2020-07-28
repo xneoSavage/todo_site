@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <ul>
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="/create">Create a todo</a>
+    <div class="col-4 offset-4"
      {% for i in todo_list %}
-        <li><a href="/{{ i.id }}"</a>{{ i.name }}, its to  {{ i.due_date }}</li>
+        <div class="card mt-3">
+            <div class="card-header">
+                <a href="/{{ i.id }}"</a>{{ i.name }}, its to  {{ i.due_date }}
+            </div>
+
+        </div>
      {% endfor %}
-    </ul>
-</body>
-</html>
+     </div>
+{% endblock %}

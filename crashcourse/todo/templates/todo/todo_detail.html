@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% extends "base.html" %}
+{% block content %}
 <body>
-    The todo name is {{ todo.name }}
-    The todo date is {{ todo.due_date }}
-
-    <a href="/{{ todo.id }}/update/">Update this todo</a>
-    <a href="/{{ todo.id }}/delete/">Delete this todo</a>
+    <p>
+        <div class="card mt-3">
+            The todo name is <b>{{ todo.name }}</b>
+            The todo date is {{ todo.due_date }}
+        </div>
+    </p>
+    <div>
+    You can update this todo or delete
+        <li>
+            <a href="/{{ todo.id }}/update/">Update this todo</a>
+            or
+            <a href="/{{ todo.id }}/delete/">Delete this todo</a>
+        </li>
+    </div>
 </body>
-</html>
+{% endblock %}

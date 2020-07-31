@@ -3,8 +3,12 @@
 <body>
     <p>
         <div class="card mt-3">
-            The todo name is <b>{{ todo.name }}</b>
-            The todo date is {{ todo.due_date }}
+             <div class="card-header">
+                The todo name is <b>{{ todo.name }}</b>
+             </div>
+            <div class="card-body">
+                The todo date is {{ todo.due_date }}
+            </div>
         </div>
     </p>
     <div>
